@@ -218,7 +218,7 @@ const startWithLetterA = (array) => array.filter(filterA)
 //
 // Make sure to use arrow functions combined with the map method.
 
-const formalGreeting = (array) => {}
+const formalGreeting = (array) => array.map(name => (`Hello, ${name}`))
 
 /// /////// PROBLEM 10 //////////
 
@@ -228,7 +228,7 @@ const formalGreeting = (array) => {}
 // Remember that by default, JavaScript sorts by converting all items to strings. So you
 // will need to provide a compare function.
 
-// REPLACE THIS WITH YOUR CODE
+const sortNumbers = (num) => num.sort((a, b) => a - b) 
 
 /// /////// PROBLEM 11 //////////
 
@@ -246,10 +246,9 @@ const employees = [
   { name: 'Steve', job: 'programmer' },
   { name: 'Alicia', job: 'designer' },
 ];
-// Do not edit the code above.
 
-// REPLACE THIS WITH YOUR CODE
-
+const findProgrammer = () => employees.filter(employee => employee.job === 'programmer')[0];
+console.log(findProgrammer());
 ////////// PROBLEM 12 //////////
 
 // Do not edit code below.
@@ -274,6 +273,7 @@ const orders = [
   Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
   Example: if tax is 0.07, the price afterTax could be calculated like this: afterTax = price * 1.07)
 */
+
 
 let orderTotals; // Code here
 
